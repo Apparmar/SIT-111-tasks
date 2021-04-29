@@ -1,0 +1,29 @@
+// Task 7.1P Amit Parmar
+
+// The initial value in the test script is set to -1
+// Therefore, I have to manually override that to 0
+@2
+M=0
+
+//Take first number and remember
+@0
+D=M
+
+//Store it in temp location - this place will store multiplied result
+@2
+M=D+M
+
+//Take second number and keep deducting 1 until reach zero
+@1
+D=M-1
+M=D
+// Jump back to instruction 2 if greater than zero
+@2
+D,JGT
+
+//Store value in the second number and end the code
+@2
+D=M
+@1
+M=D
+
