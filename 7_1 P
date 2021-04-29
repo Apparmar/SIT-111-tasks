@@ -5,6 +5,12 @@
 @2
 M=0
 
+// Exit the code if second number is 0
+@1
+D=M
+@19
+D,JEQ
+
 //Take first number and remember
 @0
 D=M
@@ -27,3 +33,5 @@ D=M
 @1
 M=D
 
+@19
+0,JEQ
