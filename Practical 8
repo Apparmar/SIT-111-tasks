@@ -1,0 +1,43 @@
+// Set the initial address to 50 - Change
+@50
+D=A
+@1
+M=D
+
+// Set the initial address to 50 - Do not change
+@0
+M=D
+
+// Set the counter to 10
+@10
+M = A
+
+//
+@3
+M=0
+@3
+D=M+1
+M=D
+
+// Jump to 50 and set value
+@1
+A=M
+M=D
+// Deduct 1 from 10
+@10
+D=M-1
+@10
+M=D
+// If D is zero then jump to end
+@30
+D,JEQ
+// Get the next address
+@1
+A=M+1
+D=A
+
+// Now have to set the 50 to 51
+@1
+M=D
+@10
+0,JMP
